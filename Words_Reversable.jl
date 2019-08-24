@@ -2,26 +2,24 @@
 # last updated 2019-08-23
 #───────────────────────────────────────────────────────────────────────────────
 function inSorted(val, a)
-# array must be sorted low-to-high
-    low = 1
-    hgh = length(a)
+# array must be sorted lo-to-high
+    lo = 1
+    hi = length(a)
 
     fnd = false # number found in array
 
-    while low ≤ hgh  &&   !fnd
-        mid = low + (hgh - low) ÷ 2
+    while lo ≤ hi  &&   !fnd
+        mid = lo + (hi - lo) ÷ 2
 
         if     a[mid] == val;   fnd = true
-        elseif a[mid] <  val;   low = mid + 1
-        else                    hgh = mid - 1
+        elseif a[mid] <  val;   lo = mid + 1
+        else                    hi = mid - 1
         end
     end
 
     fnd
 end
 #───────────────────────────────────────────────────────────────────────────────
-
-
 
 #───────────────────────────────────────────────────────────────────────────────
 function reversables(words)
@@ -44,9 +42,8 @@ function main()
     # Save words.txt from:
     # https://github.com/BenLauwens/ThinkJulia.jl/blob/master/data/words.txt
     words = []
-    
-    # [Shift](right-click) words.txt file and select "copy as path"  
-    path = # paste path here and change all '\' characters to '/' 
+
+    path = "C:/Users/TimGa/JL/Think Julia/Chapter 09/words.txt"
     open(path, "r") do f
         for line in eachline(f)
           push!(words, line)
