@@ -11,8 +11,8 @@ function inSorted(val, a)
     while low ≤ hgh  &&   !fnd
         mid = low + (hgh - low) ÷ 2
 
-        if     (a[mid] == val)  fnd = true
-        elseif (a[mid] <  val)  low = mid + 1
+        if     a[mid] == val;   fnd = true
+        elseif a[mid] <  val;   low = mid + 1
         else                    hgh = mid - 1
         end
     end
@@ -20,6 +20,7 @@ function inSorted(val, a)
     fnd
 end
 #───────────────────────────────────────────────────────────────────────────────
+
 
 
 #───────────────────────────────────────────────────────────────────────────────
