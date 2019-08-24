@@ -43,8 +43,9 @@ function main()
     # Save words.txt from:
     # https://github.com/BenLauwens/ThinkJulia.jl/blob/master/data/words.txt
     words = []
-
-    path = "C:/Users/TimGa/JL/Think Julia/Chapter 09/words.txt"
+    
+    # [Shift](right-click) words.txt file and select "copy as path"  
+    path = # paste path here and change all '\' characters to '/' 
     open(path, "r") do f
         for line in eachline(f)
           push!(words, line)
