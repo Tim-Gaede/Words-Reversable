@@ -1,25 +1,26 @@
 # Timothy Gaede
 # last updated 2019-08-23
 #───────────────────────────────────────────────────────────────────────────────
-function inSorted(val, a)
-# array must be sorted lo-to-high
+function inSorted(item, a)
+# The array, a, must be sorted from low to high
     lo = 1
     hi = length(a)
 
-    fnd = false # number found in array
+    found = false # item found in array
 
-    while lo ≤ hi  &&   !fnd
+    while lo ≤ hi  &&   !found
         mid = lo + (hi - lo) ÷ 2
 
-        if     a[mid] == val;   fnd = true
-        elseif a[mid] <  val;   lo = mid + 1
-        else                    hi = mid - 1
+        if     a[mid] == item;   found = true
+        elseif a[mid] <  item;   lo = mid + 1
+        else                     hi = mid - 1
         end
     end
 
-    fnd
+    found
 end
 #───────────────────────────────────────────────────────────────────────────────
+
 
 #───────────────────────────────────────────────────────────────────────────────
 function reversables(words)
